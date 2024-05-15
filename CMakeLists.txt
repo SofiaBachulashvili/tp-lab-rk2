@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0)
 
-option(BUILD_TESTS "Build tests" OFF)
+option(BUILD_TESTS "Build tests" ON)
 
 project(AdapterPattern)
 
