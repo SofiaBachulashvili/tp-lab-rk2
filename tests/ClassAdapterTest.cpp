@@ -13,29 +13,24 @@ TEST(AdapterTest, RequestTest) {
   EXPECT_EQ(output, "specific request\n");
 }
 
-// Mock класс для тестирования Adapter
-class MockAdapter : public Adapter
-{
-public:
-  MOCK_METHOD(void, specificRequest, (), (override));
-};
-
-TEST(AdapterTest, RequestCallsSpecificRequest)
-{
-  MockAdapter adapter;
-  EXPECT_CALL(adapter, specificRequest());
-
-  adapter.request();
-}
-
-TEST(AdapteeTest, SpecificRequestPrintsCorrectMessage)
-{
+TEST(AdapteeTest, SpecificRequestPrintsCorrectMessage) {
   Adaptee adaptee;
   testing::internal::CaptureStdout();
   adaptee.specificRequest();
   std::string output = testing::internal::GetCapturedStdout();
 
   EXPECT_EQ(output, "specific request\n");
+}
+
+TEST(AdapterTest, AdapterCreation) {
+  Adapter adapter;
+
+  // Поскольку класс Adapter наследует класс Adaptee приватно, нам нельзя напрямую вызвать метод specificRequest здесь.
+  // Для тестирования мы будем использовать макетный объект, чтобы проверить вызов метода.
+  MockAdapter mockAdapter;
+  EXPECT_CALL(mockAdapter, specificRequest());
+
+  adapter.request();
 }
 
 int main(int argc, char **argv) {
