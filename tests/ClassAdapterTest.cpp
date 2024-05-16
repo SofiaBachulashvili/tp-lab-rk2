@@ -33,7 +33,7 @@ TEST(TargetAndAdapterTest, RequestTest) {
       std::cout << "fake request\n";
     }
   };
-  
+
   FakeTarget fakeTarget;
   Adapter adapter;
 
@@ -48,9 +48,4 @@ TEST(TargetAndAdapterTest, RequestTest) {
 
   EXPECT_EQ(targetOutput, "fake request\n");
   EXPECT_EQ(adapterOutput, "specific request\n");
-}
-
-int main(int argc, char **argv) {
-  ::testing::InitGoogleTest(&argc, argv);
-  return RUN_ALL_TESTS();
 }
