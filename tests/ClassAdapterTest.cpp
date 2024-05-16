@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "adapter/ClassAdapter.cpp"
+#include "../adapter/ClassAdapter.cpp"
 
 // Тест для класса Adapter
 TEST(AdapterTest, RequestTest) {
