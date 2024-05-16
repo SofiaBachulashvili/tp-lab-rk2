@@ -6,9 +6,9 @@ project(AdapterPattern)
 option(BUILD_TESTS "Build tests" OFF)  # Опция для сборки тестов. По умолчанию включена.
 
 add_executable(AdapterPattern adapter/ClassAdapter.cpp
-                                adapter/ClassAdapter.hpp
-                                adapter/ObjectAdapter.cpp
-                                adapter/ObjectAdapter.hpp)  # Создаем исполняемый файл.
+                              adapter/ClassAdapter.hpp
+                              adapter/ObjectAdapter.cpp
+                              adapter/ObjectAdapter.hpp)  # Создаем исполняемый файл.
                                 
 if(BUILD_TESTS)
   enable_testing()  # Включаем поддержку тестирования.
