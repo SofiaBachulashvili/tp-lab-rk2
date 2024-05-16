@@ -9,13 +9,3 @@ void Adapter::request()
 {
   specificRequest();
 }
-
-/*
-int main()
-{
-  Target *t = new Adapter();
-  t->request();
-  delete t;
-  
-  return 0;
-}*/
