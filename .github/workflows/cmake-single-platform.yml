@@ -54,5 +54,5 @@ jobs:
     - name: Artifact AdapterPatternObjectDemo
       uses: actions/upload-artifact@v4
       with:
-          name: linux_artifact_objectndemo
+          name: linux_artifact_objectdemo
           path: ${{github.workspace}}/build/AdapterPatternObjectDemo
