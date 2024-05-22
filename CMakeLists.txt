@@ -18,3 +18,6 @@ if(BUILD_TESTS)
   target_link_libraries(RunTests gtest_main)  # Линкуем библиотеки для тестов.
   add_test(NAME RunTests COMMAND RunTests)  # Добавляем команду для запуска тестов.
 endif()
+
+add_executable(AdapterPatternClassDemo demo/ClassAdapterMain.cpp)
+add_executable(AdapterPatternObjectDemo demo/ObjectAdapterMain.cpp)
